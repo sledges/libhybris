@@ -354,8 +354,8 @@ cd hybris
 autoreconf -v -f -i
 %configure \
   --enable-wayland \
-  %{!?qa_stage_devel:--enable-debug} \
-  %{!?qa_stage_devel:--enable-trace} \
+  --enable-debug \
+  --enable-trace \
   --with-android-headers=/usr/lib/droid-devel/droid-headers \
 %ifarch %{arm}
   --enable-arch=arm \
