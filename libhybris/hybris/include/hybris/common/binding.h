@@ -48,7 +48,7 @@ int android_dladdr(const void *addr, void *info);
  *
  *         XXX AUTO-GENERATED FILE XXX
  **/
-
+#include "linker_debug.h"
 
 #define HYBRIS_DLSYSM(name, fptr, sym) \
     if (!name##_handle) \
@@ -61,7 +61,8 @@ int android_dladdr(const void *addr, void *info);
 #define HYBRIS_LIBRARY_INITIALIZE(name, path) \
     void *name##_handle; \
     void hybris_##name##_initialize() \
-    { \
+    {\ 
+        TRACE("zzz: %s\n", path); \
         name##_handle = android_dlopen(path, RTLD_LAZY); \
     }
 
