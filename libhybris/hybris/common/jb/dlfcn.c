@@ -55,7 +55,7 @@ static void set_dlerror(int err)
 void *android_dlopen(const char *filename, int flag)
 {
     soinfo *ret;
-
+    TRACE("zz: %s\n", filename);
     pthread_mutex_lock(&dl_lock);
     ret = find_library(filename);
     if (unlikely(ret == NULL)) {
