@@ -31,10 +31,14 @@ libhybris_common_la_SOURCES = \
 	strlcat.c \
 	dlfcn.c \
 	logging.c \
+	wrappers.c \
+	wrapper_code_generic_arm.c \
 	sysconf.c
+
 libhybris_common_la_CFLAGS = \
 	-I$(top_srcdir)/include \
 	$(ANDROID_HEADERS_CFLAGS) \
+	-marm \
 	-I$(top_srcdir)/common
 
 if HAS_ANDROID_6_0_0
