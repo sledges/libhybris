@@ -307,10 +307,8 @@ rm %{buildroot}/%{_libdir}/*.la %{buildroot}/%{_libdir}/libhybris/*.la
 %{_bindir}/setprop
 %{_libdir}/libcamera.so.1
 %{_libdir}/libcamera.so.1.0.0
-%{_libdir}/libhybris/linker/jb.la
-%{_libdir}/libhybris/linker/jb.so
-%{_libdir}/libhybris/linker/n.la
-%{_libdir}/libhybris/linker/n.so
+%{_libdir}/libhybris/linker/*.la
+%{_libdir}/libhybris/linker/*.so
 %{_libdir}/libis.so.1
 %{_libdir}/libis.so.1.0.0
 %{_libdir}/libmedia.so.1
